@@ -11,9 +11,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
 
-# group :development, :test do
-#   gem 'byebug'
-# end
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
 
 # group :development do
 #   gem 'web-console', '~> 2.0'
