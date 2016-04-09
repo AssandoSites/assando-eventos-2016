@@ -15,6 +15,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
+group :development do
+  gem 'pry-rails'
+end
+
 # group :development do
 #   gem 'web-console', '~> 2.0'
 #   gem 'spring'
