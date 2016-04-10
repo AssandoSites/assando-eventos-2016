@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  root 'talks#index'
+
+  resources :talks, path: 'palestras', only: [:show]
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
