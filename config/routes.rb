@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   resources :talks, path: 'palestras', only: [:show]
 
+  resources :attendees, path: 'inscritos', only: [:create] do
+    get 'novo' => 'attendees#new', on: :collection
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

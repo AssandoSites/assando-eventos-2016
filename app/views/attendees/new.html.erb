@@ -1,0 +1,23 @@
+<div class="inner">
+  <h3>Inscreva-se no nosso evento</h3>
+
+  <%= form_for(@attendee) do |f| %>
+    <div class="field">
+      <%= f.text_field :name, placeholder: 'Digite seu nome' %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :cpf, placeholder: 'Digite seu CPF' %>
+    </div>
+
+    <div class="field">
+      <%= f.text_field :email, placeholder: 'Digite seu e-mail' %>
+    </div>
+
+    <div class="field">
+      <%= f.phone_field :phone, placeholder: 'Digite seu telefone' %>
+    </div>
+
+    <%= f.submit 'Enviar' %>
+  <% end %>
+</div>
