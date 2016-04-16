@@ -5,8 +5,8 @@ RSpec.describe TalksController, type: :controller do
 
   describe 'GET #index' do
     before do
-      Talk.create!(title: "Primeira Palestra", description: "descricao", start: "10:00:00", finish: "11:00:00")
-      Talk.create!(title: "Abertura", description: "descricao", start: "09:00:00", finish: "10:00:00")
+      create(:talk, title: 'Abertura')
+      create(:talk, title: 'Primeira Palestra', start: '09:15:00')
       get :index
     end
 
@@ -25,7 +25,7 @@ RSpec.describe TalksController, type: :controller do
   end
 
   describe 'GET #show' do
-    let(:talk) { Talk.create!(title: "Primeira Palestra", description: "descricao", start: "10:00:00", finish: "11:00:00") }
+    let(:talk) { create(:talk, start: '10:00:00', finish: '11:00:00') }
 
     before { get :show, id: talk.slug }
 

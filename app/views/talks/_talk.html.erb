@@ -4,4 +4,8 @@
     <%= link_to(talk.title, talk_path(id: talk.slug)) %>
   </h4>
   <p><%= truncate(talk.description, length: 50) %></p>
+
+  <% if talk.speaker.present? %>
+    <p>Por <b><%= talk.speaker.name %></b></p>
+  <% end %>
 </article>

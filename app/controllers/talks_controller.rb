@@ -1,6 +1,6 @@
 class TalksController < ApplicationController
   def index
-    @talks = Talk.order(start: :asc)
+    @talks = Talk.includes(:speaker).order(start: :asc)
   end
 
   def show

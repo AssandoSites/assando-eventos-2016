@@ -1,5 +1,7 @@
 class Talk < ActiveRecord::Base
-  validates :title, :description, :start, :finish, presence: true
+  belongs_to :speaker
+
+  validates :title, :description, :start, :finish, :speaker, presence: true
   validate :start_is_before_finish
 
   before_save :generate_slug
