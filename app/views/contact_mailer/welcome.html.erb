@@ -1,0 +1,7 @@
+<p>Mensagem de contato enviada por <b><%= @name %></b>:</p>
+
+<blockquote>
+  <%= @message %>
+</blockquote>
+
+<p>Enviada em: <%= I18n.l(Time.zone.now, format: :long) %></p>
