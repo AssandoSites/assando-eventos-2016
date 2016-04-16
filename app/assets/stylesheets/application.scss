@@ -66,3 +66,20 @@
   @import 'layout/wrapper';
 
 span.error { color: red }
+
+.flash {
+  padding: 1em 2em;
+  background: silver;
+  font-size: .9em;
+  margin-bottom: 1em;
+
+  &.notice {
+    background: green;
+    color: lime;
+  }
+
+  &.alert {
+    background: maroon;
+    color: red;
+  }
+}

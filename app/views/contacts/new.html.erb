@@ -1,0 +1,20 @@
+<div class="inner">
+  <h3>Contato</h3>
+  <p>Envie sua mensagem pra gente! :)</p>
+
+  <%= simple_form_for(:contact, url: contacts_path) do |f| %>
+    <div class="field">
+      <%= f.input :name, placeholder: 'Digite seu nome', label: false %>
+    </div>
+
+    <div class="field">
+      <%= f.input :email, placeholder: 'Digite seu e-mail', label: false %>
+    </div>
+
+    <div class="field">
+      <%= f.input :message, as: :text, placeholder: 'Digite sua mensagem', label: false %>
+    </div>
+
+    <%= f.button :submit, 'Enviar mensagem' %>
+  <% end %>
+</div>

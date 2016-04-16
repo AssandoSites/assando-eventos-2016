@@ -9,7 +9,7 @@ class AttendeesController < ApplicationController
     @title = "Inscrição"
 
     if @attendee.save
-      redirect_to root_path
+      redirect_to root_path, notice: "Inscrição recebida com sucesso, nos vemos no evento!"
     else
       render :new
     end

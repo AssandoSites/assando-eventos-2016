@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     get 'novo' => 'attendees#new', on: :collection
   end
 
+  resources :contacts, path: 'contato', only: [:new, :create]
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
