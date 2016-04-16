@@ -11,6 +11,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'devise'
 
 group :development do
   gem 'letter_opener'
