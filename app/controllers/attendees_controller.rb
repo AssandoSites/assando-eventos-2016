@@ -1,10 +1,12 @@
 class AttendeesController < ApplicationController
   def new
     @attendee = Attendee.new
+    @title = "Inscrição"
   end
 
   def create
     @attendee = Attendee.new(attendee_params)
+    @title = "Inscrição"
 
     if @attendee.save
       redirect_to root_path

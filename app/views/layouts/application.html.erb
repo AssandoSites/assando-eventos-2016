@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <title>Assando Eventos</title>
+  <% if @title.present? %>
+    <title><%= @title %> - Assando Eventos</title>
+  <% else %>
+    <title>Assando Eventos</title>
+  <% end %>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 

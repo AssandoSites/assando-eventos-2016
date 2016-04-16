@@ -5,5 +5,6 @@ class TalksController < ApplicationController
 
   def show
     @talk = Talk.find_by(slug: params[:id])
+    @title = @talk.title
   end
 end
