@@ -1,4 +1,6 @@
 class Talk < ActiveRecord::Base
+  dragonfly_accessor :image
+
   belongs_to :speaker
 
   validates :title, :description, :start, :finish, :speaker, presence: true

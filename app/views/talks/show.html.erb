@@ -1,4 +1,9 @@
 <div class="inner">
+
+  <% if @talk.image_stored? %>
+    <div><%= image_tag(@talk.image.thumb('500x100#').url, alt: @talk.title) %></div>
+  <% end %>
+
   <img src="<%= @talk.speaker.gravatar %>?s=120" alt="<%= @talk.speaker.name %>">
   <h4><%= @talk.speaker.name %></h4>
 
