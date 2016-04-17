@@ -13,6 +13,8 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
 
+gem 'administrate'
+
 group :development do
   gem 'letter_opener'
 end
