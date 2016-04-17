@@ -12,6 +12,7 @@ gem 'jquery-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
+gem 'dragonfly'
 
 gem 'administrate'
 
