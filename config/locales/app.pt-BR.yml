@@ -1,0 +1,51 @@
+pt-BR:
+  models_and_attributes: &models_and_attributes
+    models:
+      attendee:
+        one: Inscrito
+        other: Inscritos
+      speaker:
+        one: Palestrante
+        other: Palestrantes
+      talk:
+        one: Palestra
+        other: Palestras
+      user:
+        one: Usuário
+        other: Usuários
+    attributes:
+      default: &default
+        name: Nome
+        created_at: Cadastro
+        updated_at: Atualização
+      attendee:
+        <<: *default
+        email: Email
+        phone: Telefone
+        cpf: CPF
+      speaker:
+        <<: *default
+        email: Email
+      talk:
+        <<: *default
+        title: Título
+        description: Descrição
+        start: Início
+        finish: Fim
+        slug: Slug
+        speaker: Palestrante
+        speaker_id: Palestrante
+      user:
+        <<: *default
+        email: Email
+        password: Senha
+        encrypted_password: Senha encriptada
+        reset_password_token: Token de nova senha
+        reset_password_sent_at: Token de nova senha enviado em
+  activerecord:
+    <<: *models_and_attributes
+  activemodel:
+    <<: *models_and_attributes
+  errors: &errors
+    messages:
+      email: inválido
