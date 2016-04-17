@@ -18,6 +18,14 @@
       <%= f.input :phone, placeholder: 'Digite seu telefone', label: false %>
     </div>
 
+    <div class="field">
+      <%= f.input :state, collection: @states.to_a.map(&:reverse), include_blank: "Escolha um estado", label: false %>
+    </div>
+
+    <div class="field">
+      <%= f.input :city, collection: [], include_blank: "Escolha uma cidade", label: false %>
+    </div>
+
     <%= f.button :submit, 'Enviar' %>
   <% end %>
 </div>

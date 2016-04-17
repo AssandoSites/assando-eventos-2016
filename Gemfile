@@ -14,6 +14,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'dragonfly'
 gem 'pundit'
+gem 'city-state'
+gem 'responders'
 
 gem 'administrate'
 

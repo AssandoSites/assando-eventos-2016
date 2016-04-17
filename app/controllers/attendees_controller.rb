@@ -3,11 +3,13 @@ class AttendeesController < ApplicationController
 
   def new
     @attendee = Attendee.new
+    @states = CS.states(:br)
     @title = "Inscrição"
   end
 
   def create
     @attendee = Attendee.new(attendee_params)
+    @states = CS.states(:br)
     @title = "Inscrição"
 
     if @attendee.save
@@ -17,9 +19,14 @@ class AttendeesController < ApplicationController
     end
   end
 
+  def cities
+    @cities = CS.cities(params[:state], (params[:country] || :br))
+    render json: { cities: @cities }
+  end
+
   private
 
   def attendee_params
-    params.require(:attendee).permit(:name, :cpf, :email, :phone)
+    params.require(:attendee).permit(:name, :cpf, :email, :phone, :state, :city)
   end
 end

@@ -1,16 +1,23 @@
 class TalksController < ApplicationController
+  respond_to :html, :json
+
   skip_before_filter :authenticate_user!, only: [:index, :show]
 
   def index
     @talks = Talk.includes(:speaker).order(start: :asc)
+
     authorize @talks
+
+    respond_with @talks
   end
 
   def show
     @talk = Talk.find_by(slug: params[:id])
+    @title = @talk.title
+
     authorize @talk
 
-    @title = @talk.title
+    respond_with @talk
   end
 
   def new

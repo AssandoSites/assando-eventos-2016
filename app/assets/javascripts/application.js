@@ -2,6 +2,7 @@
 //= require jquery_ujs
 //= require skel.min
 //= require util
+//= require cities
 
 /*
   Phantom by HTML5 UP
