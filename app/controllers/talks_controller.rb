@@ -1,4 +1,6 @@
 class TalksController < ApplicationController
+  skip_before_filter :authenticate_user!, only: [:index, :show]
+
   def index
     @talks = Talk.includes(:speaker).order(start: :asc)
   end

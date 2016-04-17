@@ -1,4 +1,6 @@
 class AttendeesController < ApplicationController
+  skip_before_filter :authenticate_user!
+
   def new
     @attendee = Attendee.new
     @title = "Inscrição"
