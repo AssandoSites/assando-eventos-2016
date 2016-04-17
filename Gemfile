@@ -13,6 +13,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'devise'
 gem 'dragonfly'
+gem 'pundit'
 
 gem 'administrate'
 
