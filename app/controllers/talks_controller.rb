@@ -3,24 +3,29 @@ class TalksController < ApplicationController
 
   def index
     @talks = Talk.includes(:speaker).order(start: :asc)
+    authorize @talks
   end
 
   def show
     @talk = Talk.find_by(slug: params[:id])
+    authorize @talk
+
     @title = @talk.title
   end
 
   def new
     @talk = Talk.new
-    @speakers = Speaker.order(name: :asc)
+    authorize @talk
 
+    @speakers = Speaker.order(name: :asc)
     @title = "Cadastro de palestra"
   end
 
   def create
     @talk = Talk.new(talk_params)
-    @speakers = Speaker.order(name: :asc)
+    authorize @talk
 
+    @speakers = Speaker.order(name: :asc)
     @title = "Cadastro de palestra"
 
     if @talk.save

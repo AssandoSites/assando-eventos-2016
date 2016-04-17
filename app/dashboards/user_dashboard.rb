@@ -12,6 +12,7 @@ class UserDashboard < Administrate::BaseDashboard
     name: Field::String,
     email: Field::String,
     password: Field::String,
+    role: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     encrypted_password: Field::String,
@@ -28,6 +29,7 @@ class UserDashboard < Administrate::BaseDashboard
     :id,
     :name,
     :email,
+    :role,
     :created_at,
   ]
 
@@ -51,6 +53,7 @@ class UserDashboard < Administrate::BaseDashboard
     :name,
     :email,
     :password,
+    :role,
   ]
 
   # Overwrite this method to customize how users are displayed

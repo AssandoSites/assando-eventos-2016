@@ -39,6 +39,7 @@ pt-BR:
         <<: *default
         email: Email
         password: Senha
+        role: Função
         encrypted_password: Senha encriptada
         reset_password_token: Token de nova senha
         reset_password_sent_at: Token de nova senha enviado em
